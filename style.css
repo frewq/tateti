@@ -1,19 +1,43 @@
 .cuadricula {
+  border: 1px solid rgb(0, 153, 255);
+
   display: grid;
   justify-content: center;
-  grid-template-columns: 30vw 30vw 30vw;
+
+  grid-template-columns: 30% 30% 30%;
   transition-duration: 400ms;
+
+  padding: 0% 20%;
 }
 
 .numero {
   border: 1px dotted rgb(0, 153, 255);
-  /* height: 6rem; */
-  font-size: 6vw;
+  font-size: 5vw;
   text-align: center;
+
   padding: 6vh 0vw;
+
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .cuadricula {
+    padding: 0% 20%;
+  }
+  .numero {
+    padding: 30% 0%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cuadricula {
+    padding: 0% 5%;
+  }
+  .numero {
+    padding: 60% 10%;
+  }
 }
 
 .numero:hover {
